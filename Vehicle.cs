@@ -6,7 +6,6 @@ namespace LearnInterfaces
     class Vehicle
     {
         //explicitly  define a construtor
-
         public Vehicle(double speed)
         {
             Speed = speed;
@@ -27,7 +26,8 @@ namespace LearnInterfaces
         {
         }
 
-        public void SpeedUp()
+        //virtual method can be override
+        public virtual void SpeedUp()
         {
         }
 

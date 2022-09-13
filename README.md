@@ -279,4 +279,5 @@ In the subclass, we mark the method as `override`, which tells the computer “I
 `public override void SpeedUp()`
 
 As an aside: there’s another way to solve this problem. Instead of using `virtual` and `override` to override a member, we can define a `new` member with the same name. Essentially, the inherited member still exists, but it is “hidden” by the member in the subclass. If this sounds confusing, that’s okay! We also think it leads to unnecessary confusion, and that leads to errors. We’re going to stick with the `virtual` - `override` approach in this lesson.
+---
 
