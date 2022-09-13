@@ -2,7 +2,8 @@ using System;
 
 namespace LearnInterfaces
 {
-    class Truck : IAutomobile
+    //inheritance from Vehicle class
+    class Truck : Vehicle, IAutomobile
     {
         //constructor
         public Truck(double speed, double weight)
@@ -21,28 +22,6 @@ namespace LearnInterfaces
         }
 
         //implement the interface
-        public string LicensePlate { get; }
-
-        public double Speed { get; set; }
-
-        public int Wheels { get; }
-
-        public double Weight { get; } //new
-
-        //methods
-        public void Honk()
-        {
-            Console.WriteLine("HONK!");
-        }
-
-        public void SpeedUp()
-        {
-            Speed += 5; //need set() interfeace
-        }
-
-        public void SlowDown()
-        {
-            Speed -= 5;
-        }
+        public double Weight { get; }
     }
 }
