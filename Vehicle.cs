@@ -5,6 +5,14 @@ namespace LearnInterfaces
     //Create a Superclass
     class Vehicle
     {
+        //explicitly  define a construtor
+
+        public Vehicle(double speed)
+        {
+            Speed = speed;
+            LicensePlate = Tools.GenerateLicensePlate();
+        }
+
         //properties
         //A protected member can be accessed by
         // the current class and any class that inherits

@@ -7,14 +7,10 @@ namespace LearnInterfaces
     //Sedan inherits the Vehicle class.
     class Sedan : Vehicle, IAutomobile
     {
-        //constructor
-        public Sedan(double speed)
+        //superclass constructor using : base(speed).
+        public Sedan(double speed) :
+            base(speed)
         {
-            this.Speed = speed;
-            Wheels = 4;
-
-            //To make a random license plate
-            LicensePlate = Tools.GenerateLicensePlate();
         }
     }
 }

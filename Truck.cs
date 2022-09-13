@@ -6,11 +6,11 @@ namespace LearnInterfaces
     class Truck : Vehicle, IAutomobile
     {
         //constructor
-        public Truck(double speed, double weight)
+        //all the superclass constructor using : base(speed)
+        public Truck(double speed, double weight) :
+            base(speed)
         {
-            this.Speed = speed;
             this.Weight = weight;
-            LicensePlate = Tools.GenerateLicensePlate();
             if (weight < 400)
             {
                 this.Wheels = 8;
