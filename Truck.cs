@@ -23,5 +23,11 @@ namespace LearnInterfaces
 
         //implement the interface
         public double Weight { get; }
+
+        //define a Describe() methods
+        public override string Describe()
+        {
+            return $"This Truck  {Wheels} {Speed} km/h.";
+        }
     }
 }

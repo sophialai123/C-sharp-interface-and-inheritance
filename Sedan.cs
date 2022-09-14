@@ -12,5 +12,11 @@ namespace LearnInterfaces
             base(speed)
         {
         }
+
+        //define a Describe() methods
+        public override string Describe()
+        {
+            return $"This Sedan  {Wheels} {Speed} km/h.";
+        }
     }
 }

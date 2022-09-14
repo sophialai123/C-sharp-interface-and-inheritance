@@ -2,8 +2,8 @@ using System;
 
 namespace LearnInterfaces
 {
-    //Create a Superclass
-    class Vehicle
+    //Create a Superclass and make it abstract
+    abstract class Vehicle
     {
         //explicitly  define a construtor
         public Vehicle(double speed)
@@ -31,8 +31,11 @@ namespace LearnInterfaces
         {
         }
 
-        public void SlowDown()
+        public virtual void SlowDown()
         {
         }
+
+        //Add the abstract method Describe()
+        public abstract string Describe();
     }
 }

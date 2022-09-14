@@ -280,4 +280,21 @@ In the subclass, we mark the method as `override`, which tells the computer “I
 
 As an aside: there’s another way to solve this problem. Instead of using `virtual` and `override` to override a member, we can define a `new` member with the same name. Essentially, the inherited member still exists, but it is “hidden” by the member in the subclass. If this sounds confusing, that’s okay! We also think it leads to unnecessary confusion, and that leads to errors. We’re going to stick with the `virtual` - `override` approach in this lesson.
 ---
+## Make Inherited Members Abstract
+`Abstract` member have no implementation in the superclass, but they must be implemented in all subclasses.If one member of a class is `abstract`, then the class itself can’t really exist as an instance, and class must be abstract. Label it with abstract as well:`abstract class Vehicle`
 
+To do this we need one more modifier: abstract. This line would go into the Vehicle class:
+
+`public abstract string Describe();`
+
+Once we write the abstract method and mark the class as abstract, we’ll need to actually implement it in each subclass. For example in `Sedan`:
+
+
+
+```
+public override string Describe()
+{
+  return $"This Sedan is moving on {Wheels} wheels at {Speed} km/h, with license plate {LicensePlate}.";
+}
+```
+To make it clear that this `Describe()` method in `Sedan` is overriding the `Describe()` method in` Vehicle`, we will need to label it `override`.
