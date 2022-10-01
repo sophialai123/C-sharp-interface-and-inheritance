@@ -279,7 +279,9 @@ In the subclass, we mark the method as `override`, which tells the computer “I
 `public override void SpeedUp()`
 
 As an aside: there’s another way to solve this problem. Instead of using `virtual` and `override` to override a member, we can define a `new` member with the same name. Essentially, the inherited member still exists, but it is “hidden” by the member in the subclass. If this sounds confusing, that’s okay! We also think it leads to unnecessary confusion, and that leads to errors. We’re going to stick with the `virtual` - `override` approach in this lesson.
+
 ---
+
 ## Make Inherited Members Abstract
 `Abstract` member have no implementation in the superclass, but they must be implemented in all subclasses.If one member of a class is `abstract`, then the class itself can’t really exist as an instance, and class must be abstract. Label it with abstract as well:`abstract class Vehicle`
 
@@ -298,3 +300,21 @@ public override string Describe()
 }
 ```
 To make it clear that this `Describe()` method in `Sedan` is overriding the `Describe()` method in` Vehicle`, we will need to label it `override`.
+
+---
+
+## Review
+
+- Inheritance is a way to avoid duplication across multiple classes.
+
+- In inheritance, one class inherits the members of another class.
+
+- The class that inherits is called a subclass or derived class. The other class is called a superclass or base class.
+
+- We can access a superclass’ members using `base`. This is very useful when calling the superclass’ constructor.
+
+- We can restrict access to a superclass and its subclasses using `protected`.
+
+- We can `override` a superclass member using `virtual` and `override`.
+
+- We can make a member in a superclass without defining its implementation using `abstract`. This is useful if every subclass’ implementation will be different.
